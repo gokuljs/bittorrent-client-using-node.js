@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gokuljs/bittorrent-client-using-node.js/issues"
   },
-  "homepage": "https://github.com/gokuljs/bittorrent-client-using-node.js#readme"
+  "homepage": "https://github.com/gokuljs/bittorrent-client-using-node.js#readme",
+  "dependencies": {
+    "bencode": "^2.0.1"
+  }
 }
