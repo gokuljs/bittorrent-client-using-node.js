@@ -13,6 +13,11 @@
  'use strict';
  const fs = require('fs');
  const bencode = require('bencode');
+ const dgram = require('dgram'); //Datagram sockets are available through require('dgram').
+ //  connsole.log(dgram)
+ const Buffer = require('buffer').Buffer;
+ const urlParse = require('url').parse;
 
  const torrent = bencode.decode(fs.readFileSync('puppy.torrent'));
+ console.log(torrent)
  console.log(torrent.announce.toString('utf8'));
