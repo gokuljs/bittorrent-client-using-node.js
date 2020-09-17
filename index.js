@@ -17,8 +17,19 @@
  //  The dgram module provides an implementation of UDP(user datagram protocol)datagram sockets.
  const Buffer = require('buffer').Buffer; //Buffer objects are used to represent a fixed-length sequence of bytes. Many Node.js APIs support Buffers.
  //The Buffer class is a subclass of JavaScript's Uint8Array class and extends it with methods that cover additional use cases. Node.js APIs accept plain Uint8Arrays wherever Buffers are supported as well.
- const urlParse = require('url').parse;
+ const urlParse = require('url').parse; //I use the url module’s parse method on our tracker url. This lets me easily extract different parts of the url like its protocol, hostname, port, etc.
 
  const torrent = bencode.decode(fs.readFileSync('puppy.torrent'));
- console.log(torrent)
- console.log(torrent.announce.toString('utf8'));
+ // 2
+ const url = urlParse(torrent.announce.toString('utf8'));
+
+ // 3
+ const socket = dgram.createSocket('udp4'); // creating an udp socket ot udp4 or udp6
+ // 4
+ const myMsg = Buffer.from('hello?', 'utf8');
+ // 5
+ socket.send(myMsg, 0, myMsg.length, url.port, url.host, () => {});
+ // 6
+ socket.on('message', msg => {
+     console.log('message is', msg);
+ });
