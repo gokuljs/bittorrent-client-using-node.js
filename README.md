@@ -9,5 +9,7 @@ http://www.bittorrent.org/beps/bep_0020.html
 ### bencode 
 https://wiki.theory.org/index.php/BitTorrentSpecification#Bencoding
 ### url mapping  
-https://url.spec.whatwg.org/ \
 https://nodejs.org/docs/latest/api/url.html#url_url
+#### WHATWG URL standard
+https://url.spec.whatwg.org/ \
+
