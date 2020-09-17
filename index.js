@@ -13,9 +13,10 @@
  'use strict';
  const fs = require('fs');
  const bencode = require('bencode');
- const dgram = require('dgram'); //Datagram sockets are available through require('dgram').
- //  connsole.log(dgram)
- const Buffer = require('buffer').Buffer;
+ const dgram = require('dgram');
+ //  The dgram module provides an implementation of UDP(user datagram protocol)datagram sockets.
+ const Buffer = require('buffer').Buffer; //Buffer objects are used to represent a fixed-length sequence of bytes. Many Node.js APIs support Buffers.
+ //The Buffer class is a subclass of JavaScript's Uint8Array class and extends it with methods that cover additional use cases. Node.js APIs accept plain Uint8Arrays wherever Buffers are supported as well.
  const urlParse = require('url').parse;
 
  const torrent = bencode.decode(fs.readFileSync('puppy.torrent'));
