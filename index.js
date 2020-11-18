@@ -22,8 +22,8 @@
  const torrent = bencode.decode(fs.readFileSync('puppy.torrent'));
  // 2
  const url = urlParse(torrent.announce.toString('utf8'));
-
- // 3
+ console.log(url)
+     // 3
  const socket = dgram.createSocket('udp4'); // creating an udp socket ot udp4 or udp6
  // 4
  const myMsg = Buffer.from('hello?', 'utf8');
