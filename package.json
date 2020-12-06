@@ -1,0 +1,22 @@
+{
+  "name": "bittorrent-client",
+  "version": "1.0.0",
+  "description": "building a bittorrent-client from scratch ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gokuljs/bittorrent-client-using-node.js.git"
+  },
+  "author": "gokul js",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gokuljs/bittorrent-client-using-node.js/issues"
+  },
+  "homepage": "https://github.com/gokuljs/bittorrent-client-using-node.js#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
