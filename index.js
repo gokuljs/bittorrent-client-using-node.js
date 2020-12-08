@@ -7,3 +7,4 @@ const bencode = require("bencode");
 // now we want to conver this to buffer code to utf8 standard and print it out
 console.log(torrent.toString('utf8'));
 // In node.js a buffer is a container for raw bytes. A byte just means eight bits, and a bit is just a 0 or a 1. So a byte might look like 10101010
+// bencode is a data serilization format mostly used into bittorrent 
