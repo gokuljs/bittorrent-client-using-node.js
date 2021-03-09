@@ -1,6 +1,6 @@
 "# bittorrent-client-using-node.js" 
 ## important links 
-### references
+### References
 https://wiki.theory.org/index.php/BitTorrentSpecification \
 http://www.bittorrent.org/beps/bep_0015.html \
 https://www.morehawes.co.uk/the-bittorrent-protocol \
