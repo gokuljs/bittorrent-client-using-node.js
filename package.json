@@ -9,6 +9,7 @@
   "author": "gokul js",
   "license": "ISC",
   "dependencies": {
-    "bencode": "^2.0.1"
+    "bencode": "^2.0.1",
+    "url-parse": "^1.5.1"
   }
 }
