@@ -21,11 +21,3 @@ const socket = dgram.createSocket('udp4'); // we are passing udp4 datagram socke
 // 4
 const myMsg = Buffer.from('hello?', 'utf8'); // we are converting a string of standard utf8 to buffer 
 // 5
-socket.send(myMsg, 0, myMsg.length, url.port, url.host, () => {}); // normally this is used for  sending messages 
-// your passing the buffer message 
-//second argument is it is senbding from argument 0 to total length of the message)
-// last two represents the port number which it should be sent and the receivers host 
-// last one is call back it tells how to handle incoming messages 
-socket.on('message', msg => {
-    console.log('message is', msg);
-});
