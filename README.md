@@ -15,4 +15,5 @@ https://nodejs.org/docs/latest/api/url.html#url_url
 https://url.spec.whatwg.org/ \
 ### Specific protocol for getting list of peers
 http://www.bittorrent.org/beps/bep_0015.html
-
+### BEP format 
+http://www.bittorrent.org/beps/bep_0015.html
