@@ -1,8 +1,8 @@
 //getting started with tracker 
 'use strict';
-const dgram = require("dgram"); // create an dgram socket 
-const buffer = require("buffer").Buffer; // importing buffer package to convert string to buffer viceversa
-const urlParse = require("url-parse").parse; // importing url parse to get specific contents inside url 
+const dgram = require('dgram'); // creating a datagram socket 
+const Buffer = require('buffer').Buffer; // creating a buffer 
+const urlParse = require('url').parse; // importing url parse to get specific contents inside url 
 // four major steps followed in this 
 // send one connection request to the receiver end 
 //get response back from the receiver this is shows us that that connection has been established between sender and receiver 
