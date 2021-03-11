@@ -8,6 +8,10 @@ const urlParse = require('url').parse; // importing url parse to get specific co
 //get response back from the receiver this is shows us that that connection has been established between sender and receiver 
 //extract the connection id that tracker which files we are intrested in 
 // get announce response and extract peers list 
+
+
+///<-- setting up crypto 
+
 module.exports.getPeers = (torrent, callback) => { // it acts as an return type when function call is made 
     const socket = dgram.createSocket('udp4'); // creating an ipv4 udp socket 
     const url = torrent.announce.toString('utf8'); // passinfg the url in the form of string 
@@ -31,7 +35,8 @@ module.exports.getPeers = (torrent, callback) => { // it acts as an return type 
         }
     });
 };
-
+// building message s
+// This tells us that our message should start out with a 64-bit (i.e. 8 bytes) integer at index 0, and that the value should be 0x41727101980. Since we just write 8 bytes, the index of the next part is 8. Now we write 32-bit integer (4 bytes) with the value 0. This moves us up to an offset of 12 bytes, and we write a random 32-bit integer. So the total message length is 8 bytes + 4 bytes + 4bytes = 16 bytes long, and should look something like this:
 function udpSend(socket, message, rawUrl, callback = () => {}) {
     const url = urlParse(rawUrl);
     socket.send(message, 0, message.length, url.port, url.host, callback);
